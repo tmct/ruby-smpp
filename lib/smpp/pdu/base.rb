@@ -181,9 +181,9 @@ module Smpp::Pdu
     def pp_header
       out = ''
       out << "Header:\n"
-      out << "\tCommand: #{PDU_TYPES[command_id]}\n"
-      out << "\tStatus: #{COMMAND_STATUSES[command_status]}\n"
-      out << "\tSequence number: #{sequence_number}\n"
+      out << "  Command:         #{PDU_TYPES[command_id]}\n"
+      out << "  Status:          #{COMMAND_STATUSES[command_status]}\n"
+      out << "  Sequence number: #{sequence_number}\n"
       out
     end
 

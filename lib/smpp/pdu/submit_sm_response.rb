@@ -34,7 +34,7 @@ class Smpp::Pdu::SubmitSmResponse < Smpp::Pdu::Base
   def pp_body
     out = ''
     out << "Body:\n"
-    out << "\tMessage ID: #{message_id}\n"
+    out << "  Message ID: #{message_id}\n"
     out
   end
 end

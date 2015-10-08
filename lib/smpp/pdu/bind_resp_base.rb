@@ -18,7 +18,7 @@ class Smpp::Pdu::BindRespBase < Smpp::Pdu::Base
   def pp_body
     out = ''
     out << "Body:\n"
-    out << "\tSystem ID: #{system_id}\n"
+    out << "  System ID:  #{system_id}\n"
     out
   end
 

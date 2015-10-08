@@ -27,13 +27,13 @@ class Smpp::Pdu::BindBase < Smpp::Pdu::Base
   def pp_body
     out = ''
     out << "Body:\n"
-    out << "\tSystem ID: #{system_id}\n"
-    out << "\tPassword: #{password}\n"
-    out << "\tSystem Type: #{system_type}\n"
-    out << "\tInterface version: #{interface_version}\n"
-    out << "\tAddr TON: #{addr_ton}\n"
-    out << "\tAddr NPI: #{addr_npi}\n"
-    out << "\tAddress range: #{address_range}\n"
+    out << "  System ID:          #{system_id}\n"
+    out << "  Password:           #{password}\n"
+    out << "  System Type:        #{system_type}\n"
+    out << "  Interface version:  #{interface_version}\n"
+    out << "  Addr TON:           #{addr_ton}\n"
+    out << "  Addr NPI:           #{addr_npi}\n"
+    out << "  Address range:      #{address_range}\n"
     out
   end
 end
