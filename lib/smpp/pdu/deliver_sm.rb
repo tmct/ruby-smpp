@@ -148,4 +148,28 @@ class Smpp::Pdu::DeliverSm < Smpp::Pdu::Base
   def self.data_encoder=(encoder)
     @@encoder = encoder
   end
+
+  def pp_body
+    out = ''
+    out << "Body:\n"
+    out << "  Service type:             #{service_type}\n"
+    out << "  Source addr TON:          #{source_addr_ton}\n"
+    out << "  Source addr NPI:          #{source_addr_npi}\n"
+    out << "  Source address:           #{source_addr}\n"
+    out << "  Dest addr TON:            #{dest_addr_ton}\n"
+    out << "  Dest addr NPI:            #{dest_addr_npi}\n"
+    out << "  Dest address:             #{destination_addr}\n"
+    out << "  ESM class:                #{esm_class}\n"
+    out << "  Protocol ID:              #{protocol_id}\n"
+    out << "  Priority flag:            #{priority_flag}\n"
+    out << "  Schedule delivery time:   #{schedule_delivery_time}\n"
+    out << "  Validity period:          #{validity_period}\n"
+    out << "  Registered delivery:      #{registered_delivery}\n"
+    out << "  Replace if present flag:  #{replace_if_present_flag}\n"
+    out << "  Data coding:              #{data_coding}\n"
+    out << "  SM default msg ID:        #{sm_default_msg_id}\n"
+    out << "  SM length:                #{sm_length}\n"
+    out << "  Short message:            #{short_message}\n"
+    out
+  end
 end

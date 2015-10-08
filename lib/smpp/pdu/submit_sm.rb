@@ -93,7 +93,7 @@ class Smpp::Pdu::SubmitSm < Smpp::Pdu::Base
   def pp_body
     out = ''
     out << "Body:\n"
-    out << "  Service type: #{service_type}\n"
+    out << "  Service type:             #{service_type}\n"
     out << "  Source addr TON:          #{source_addr_ton}\n"
     out << "  Source addr NPI:          #{source_addr_npi}\n"
     out << "  Source address:           #{source_addr}\n"
