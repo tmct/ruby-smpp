@@ -15,4 +15,11 @@ class Smpp::Pdu::BindRespBase < Smpp::Pdu::Base
     new(seq, status, system_id)
   end
 
+  def pp_body
+    out = ''
+    out << "Body:\n"
+    out << "\tSystem ID: #{system_id}\n"
+    out
+  end
+
 end

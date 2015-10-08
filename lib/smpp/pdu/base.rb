@@ -171,5 +171,24 @@ module Smpp::Pdu
       return optionals
     end
 
+    def pretty_print
+      out = ''
+      out << pp_header
+      out << pp_body
+      out
+    end
+
+    def pp_header
+      out = ''
+      out << "Header:\n"
+      out << "\tCommand: #{PDU_TYPES[command_id]}\n"
+      out << "\tStatus: #{COMMAND_STATUSES[command_status]}\n"
+      out << "\tSequence number: #{sequence_number}\n"
+      out
+    end
+
+    def pp_body
+      ''
+    end
   end
 end
