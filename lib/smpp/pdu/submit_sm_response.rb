@@ -30,4 +30,11 @@ class Smpp::Pdu::SubmitSmResponse < Smpp::Pdu::Base
     end
     new(seq, status, message_id, optionals)
   end
+
+  def pp_body
+    out = ''
+    out << "Body:\n"
+    out << "\tMessage ID: #{message_id}\n"
+    out
+  end
 end

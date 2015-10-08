@@ -90,4 +90,28 @@ class Smpp::Pdu::SubmitSm < Smpp::Pdu::Base
     new(source_addr, destination_addr, short_message, options, seq)
   end
 
+  def pp_body
+    out = ''
+    out << "Body:\n"
+    out << "\tService type: #{service_type}\n"
+    out << "\tSource addr TON: #{source_addr_ton}\n"
+    out << "\tSource addr NPI: #{source_addr_npi}\n"
+    out << "\tSource address: #{source_addr}\n"
+    out << "\tDest addr TON: #{dest_addr_ton}\n"
+    out << "\tDest addr NPI: #{dest_addr_npi}\n"
+    out << "\tDest address: #{destination_addr}\n"
+
+    out << "\tESM class: #{esm_class}\n"
+    out << "\tProtocol ID: #{protocol_id}\n"
+    out << "\tPriority flag: #{priority_flag}\n"
+    out << "\tSchedule delivery time: #{schedule_delivery_time}\n"
+    out << "\tValidity period: #{validity_period}\n"
+    out << "\tRegistered delivery: #{registered_delivery}\n"
+    out << "\tReplace if present flag: #{replace_if_present_flag}\n"
+    out << "\tData coding: #{data_coding}\n"
+    out << "\tSM default msg ID: #{sm_default_msg_id}\n"
+    out << "\tSM length: #{sm_length}\n"
+    out << "\tShort message: #{short_message}\n"
+    out
+  end
 end
