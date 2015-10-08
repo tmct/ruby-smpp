@@ -1,6 +1,6 @@
 = Ruby-SMPP
 
-{<img src="https://travis-ci.org/raykrueger/ruby-smpp.png" />}[https://travis-ci.org/raykrueger/ruby-smpp]
+<b>NOTE: This is a fork of raykrueger/ruby-smpp, created because we wanted to decode SMPP PDUs in a Ruby 2 enviroment.</b>. Original readme follows below.
 
 == DESCRIPTION:
 
