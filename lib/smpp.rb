@@ -24,4 +24,6 @@ Dir.glob(File.join(File.dirname(__FILE__), 'smpp', 'pdu', '*.rb')) do |f|
 end
 
 # Default logger. Invoke this call in your client to use another logger.
-Smpp::Base.logger = Logger.new(STDOUT)
+logger = Logger.new(STDOUT)
+logger.level = Logger::FATAL
+Smpp::Base.logger = logger
