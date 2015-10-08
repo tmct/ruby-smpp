@@ -6,14 +6,29 @@ require 'smpp/version'
 Gem::Specification.new do |spec|
   spec.name          = "ruby-smpp"
   spec.version       = Smpp::VERSION
-  spec.authors       = ["Ray Krueger", "August Z. Flatby"]
-  spec.email         = ["raykrueger@gmail.com"]
+  spec.authors       = ["Ray Krueger", "August Z. Flatby", "Thomas McTiernan"]
+  spec.email         = ["thomasmctiernan@gmail.com"]
   spec.description   = %q{Ruby implementation of the SMPP protocol, based on EventMachine. SMPP is a protocol that allows ordinary people outside the mobile network to exchange SMS messages directly with mobile operators.}
   spec.summary       = %q{Ruby implementation of the SMPP protocol, based on EventMachine.}
-  spec.homepage      = "http://github.com/raykrueger/ruby-smpp"
+  spec.homepage      = "http://github.com/tmct/ruby-smpp"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = Dir['lib/ *.rb'] + Dir['lib/smpp/ *.rb'] + Dir['lib/pdu/ *.rb'] + Dir['test/ *.rb'] + [
+'.gitignore',
+'.ruby-version',
+'.travis.yml',
+'CHANGELOG',
+'CONTRIBUTORS.txt',
+'Gemfile',
+'Gemfile.lock',
+'LICENSE',
+'README.rdoc',
+'Rakefile',
+'VERSION',
+'examples/PDU1.example',
+'examples/PDU2.example',
+'ruby-smpp.gemspec'
+]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
