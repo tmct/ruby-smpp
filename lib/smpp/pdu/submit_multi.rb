@@ -67,4 +67,10 @@ class Smpp::Pdu::SubmitMulti < Smpp::Pdu::Base
     formatted_array.join("\0");
   end
 
+  def pp_body
+    out = ''
+    out << "Body:\n"
+    out << "  Decoding of submit_multi body not supported\n"
+    out
+  end
 end

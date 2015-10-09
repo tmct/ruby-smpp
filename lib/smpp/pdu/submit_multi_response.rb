@@ -46,6 +46,10 @@ class Smpp::Pdu::SubmitMultiResponse < Smpp::Pdu::Base
     new(seq, status, message_id, unsuccess_smes)
   end
 
-
-
+  def pp_body
+    out = ''
+    out << "Body:\n"
+    out << "  Decoding of submit_multi_resp body not supported\n"
+    out
+  end
 end
