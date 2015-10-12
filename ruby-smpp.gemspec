@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Smpp::VERSION
   spec.authors       = ["Ray Krueger", "August Z. Flatby", "Thomas McTiernan"]
   spec.email         = ["thomasmctiernan@gmail.com"]
-  spec.description   = %q{Ruby implementation of the SMPP protocol, based on EventMachine. SMPP is a protocol that allows ordinary people outside the mobile network to exchange SMS messages directly with mobile operators.}
-  spec.summary       = %q{Ruby implementation of the SMPP protocol, based on EventMachine.}
+  spec.description   = %q{Ruby implementation of the SMPP protocol. SMPP is a protocol that allows ordinary people outside the mobile network to exchange SMS messages directly with mobile operators. Hacked version to remove EventMachine - this will only parse PDUs.}
+  spec.summary       = %q{Ruby implementation of the SMPP protocol.}
   spec.homepage      = "http://github.com/tmct/ruby-smpp"
   spec.license       = "MIT"
 
@@ -17,8 +17,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
-
-  spec.add_dependency "eventmachine", ">= 0.10.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
