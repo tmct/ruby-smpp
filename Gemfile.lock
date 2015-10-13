@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ruby-smpp (0.6.0)
+    ruby-smpp (0.6.0.msw)
 
 GEM
   remote: https://rubygems.org/
