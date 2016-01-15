@@ -110,7 +110,7 @@ class Smpp::Pdu::SubmitSm < Smpp::Pdu::Base
     out << "  Data coding:              #{data_coding}\n"
     out << "  SM default msg ID:        #{sm_default_msg_id}\n"
     out << "  SM length:                #{sm_length}\n"
-    out << "  Short message:            #{short_message}\n"
+    out << "  Short message:            #{short_message.dump}\n"
     out
   end
 end
