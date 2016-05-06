@@ -170,6 +170,9 @@ class Smpp::Pdu::DeliverSm < Smpp::Pdu::Base
     out << "  SM default msg ID:        #{sm_default_msg_id}\n"
     out << "  SM length:                #{sm_length}\n"
     out << "  Short message:            #{short_message.dump}\n"
+    for optional_parameter in optional_parameters
+        out << "  Optional parameter:      #{optional_parameter}" #TODO print out this in more detail
+    end
     out
   end
 end
