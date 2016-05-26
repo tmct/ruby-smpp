@@ -175,6 +175,7 @@ module Smpp::Pdu
       out = ''
       out << pp_header
       out << pp_body
+      out << pp_opt_params
       out
     end
 
@@ -189,6 +190,14 @@ module Smpp::Pdu
 
     def pp_body
       ''
+    end
+
+    def pp_opt_params
+      out = ''
+      optional_parameters.each do |key, optional_parameter|
+        out << optional_parameter.pp_opt_param
+      end
+      out
     end
 
     def command_type_string

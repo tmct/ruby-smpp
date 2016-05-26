@@ -170,12 +170,6 @@ class Smpp::Pdu::DeliverSm < Smpp::Pdu::Base
     out << "  SM default msg ID:        #{sm_default_msg_id}\n"
     out << "  SM length:                #{sm_length}\n"
     out << "  Short message:            #{short_message.dump}\n"
-    optional_parameters.each do |key, optional_parameter|
-      out << optional_parameter.pp_opt_param
-      #todo will pp suffice or override
-    end
-    # TODO test this
-    # TODO find out which other types can have opt params
     out
   end
 end

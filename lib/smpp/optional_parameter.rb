@@ -118,7 +118,7 @@ class Smpp::OptionalParameter
     out = ""
     out << "  Optional parameter:\n"
     out << "    Type:     #{type}\n"
-    out << "    Value:    #{self.value.dump}\n" #todo output value to hex instead of dumping, e.g. 0xabcd
+    out << "    Value:    \\x#{self.value.unpack("H*")[0]}\n"
     out
   end
 
