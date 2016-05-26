@@ -194,8 +194,10 @@ module Smpp::Pdu
 
     def pp_opt_params
       out = ''
-      optional_parameters.each do |key, optional_parameter|
-        out << optional_parameter.pp_opt_param
+      if (defined? optional_parameters) && !optional_parameters.nil?
+        optional_parameters.each do |key, optional_parameter|
+          out << optional_parameter.pp_opt_param
+        end
       end
       out
     end
