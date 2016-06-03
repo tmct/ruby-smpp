@@ -3,6 +3,7 @@
 class Smpp::OptionalParameter
 
   #SMPP Optional Parameter Tag definitions
+  #(Taken from http://www.activexperts.com/sms-component/smpp-specifications/smpp-parameter-definition/#smpp_optional_parameters)
   DEST_ADDR_SUBUNIT           = 0x0005
   DEST_NETWORK_TYPE           = 0x0006
   DEST_BEARER_TYPE            = 0x0007
