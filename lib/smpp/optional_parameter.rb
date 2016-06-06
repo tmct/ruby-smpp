@@ -114,11 +114,11 @@ class Smpp::OptionalParameter
   def pp_opt_param
     type = OPTIONAL_PARAMETER_TAG_DEFINITIONS[self.tag]
     if type.nil?
-      type = "(unrecognised type)"
+      type = "unrecognised type"
     end
     out = ""
     out << "  Optional parameter:\n"
-    out << "    Type:     #{type}\n"
+    out << "    Type:     \\x#{self.tag.to_s(16)} (#{type})\n"
     out << "    Value:    \\x#{self.value.unpack("H*")[0]}\n"
     out
   end
